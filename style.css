@@ -1,0 +1,415 @@
+/* body {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(218, 5, 5);
+    padding: 0;
+    align-items: left;
+    height: auto;
+    margin:0%;
+    display:flex ;
+    justify-content: center;
+    /* background-color: #1E1E2F; 
+     background: linear-gradient(120deg, #000 0%, #232946 60%, #00fff0 100%); 
+
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.game-container{
+    flex-direction: column;
+    align-items:flex-start;
+    padding : 10px;
+    margin : 0;
+    display: flex;
+    color :rgb(5, 19, 218);
+    justify-content: center;
+    gap : 40px;
+    display: flex;
+    
+}
+.button{
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    font-size: 10rem;
+    border-radius: 8px;
+    border: none;
+    gap: 8px;
+    background: #282A36;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 10rem
+}
+h1{
+    font-size: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #00FFFF;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 1px;
+}
+.button button {
+    padding: 0.7rem 1.5rem;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: none;
+    background: rgb(5, 218, 218);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button button:hover {
+    background: #00FFFF;
+    color: #1E1E2F;
+   transform: scale(1.05);
+   transition: all 0.3s ease;
+}
+#result{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: #FF6F61;
+    white-space: pre-line;
+    font-weight: bold;
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    background-color: #2D2F3A;
+    padding: 20px;
+    display: flex;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px #00FFFF;
+    flex-direction: column ;
+    align-items: center;
+}
+.leaderboard {
+    justify-content:space-between;
+    margin-top: 0;
+    text-align: centre;
+    font-size: 1rem;
+    color: #00FFFF;
+    font-weight: bold;
+    border: 2px solid #2196f3;
+    border-radius: 12px;
+    background: #232946;
+    padding: 5px 10px;
+    display: inline-block;
+    min-width: 90px;
+    box-shadow: 0 4px 24px rgba(0,255,255,0.15);
+    max-height: 180px;
+    position: fixed;
+    top: 100px;
+    bottom : 100px;
+    right: 20px;
+}
+
+.leaderboard h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.leaderboard p {
+    margin: 0.5rem 0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#banter {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #FFD700; 
+    font-weight: bold;
+    font-family: 'Poppins', cursive, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #000, 0 0 4px #00fff0;
+    transition: color 0.3s;
+}
+.modes {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.modes button {
+    margin: 0 10px;
+    padding: 0.7rem 2.2rem;
+    border-radius: 30px;
+    border: 2px solid #00fff0;
+    background: #232946;
+    color: #00fff0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(0,255,255,0.08);
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        border 0.2s,
+        transform 0.2s;
+}
+
+.modes button:hover {
+    background: #00fff0;
+    color: #232946;
+    border: 2px solid #00fff0;
+    transform: scale(1.07);
+}
+
+.modes button.selected-mode {
+    background: linear-gradient(90deg, #00fff0 60%, #2196f3 100%);
+    color: #232946;
+    border: 2px solid #2196f3;
+    box-shadow: 0 4px 16px rgba(0,255,255,0.18);
+    transform: scale(1.12);
+}
+#achievement {
+    margin: 24px auto 0 auto;
+    padding: 14px 28px;
+    min-height: 32px;
+    min-width: 180px;
+    max-width: 90vw;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff9800 60%, #ffd700 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(255, 152, 0, 0.18);
+    letter-spacing: 1px;
+    border: 2px solid #ffd700;
+    text-shadow: 0 2px 8px #000, 0 0 4px #fffbe7;
+    animation: pop-achieve 0.5s;
+    transition: background 0.3s, color 0.3s;
+}
+
+@keyframes pop-achieve {
+    0% { transform: scale(0.8); opacity: 0; }
+    70% { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1); }
+}
+#mode-selection {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+}
+
+#mode-selection button {
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    border: 2px solid #00fff0;
+    background: #232946;
+    color: #00fff0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(0,255,255,0.10);
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        border 0.2s,
+        transform 0.2s;
+}
+
+#mode-selection button:hover {
+    background: linear-gradient(90deg, #00fff0 60%, #2196f3 100%);
+    color: #232946;
+    border: 2px solid #2196f3;
+    transform: scale(1.08);
+} */
+
+/* Prevent page scroll & fill viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #000 0%, #232946 60%, #00fff0 100%);
+  color: #e0e0e0;
+}
+
+/* Toggle Leaderboard Button */
+.toggle-leaderboard {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  background: rgba(0,255,255,0.8);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #1E1E2F;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+.toggle-leaderboard:hover {
+  background: #00FFFF;
+  transform: scale(1.05);
+}
+
+/* Game container & inner scroll */
+.game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  background: rgba(45, 47, 58, 0.95);
+}
+.main-content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  text-align: center;
+  margin-top: 2.5rem; /* Adjust this value as needed */
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #00FFFF;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  color: #00FFFF;
+  margin-bottom: 1rem;
+}
+
+/* Mode Selection & Room Controls */
+#mode-selection,
+#room-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+#room-controls input {
+  flex: 1 1 150px;
+  padding: 0.5rem;
+  border: 2px solid #00fff0;
+  border-radius: 0.5rem;
+  background: #232946;
+  color: #fff;
+}
+#mode-selection button,
+#room-controls button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #00fff0;
+  border-radius: 0.5rem;
+  background: #232946;
+  color: #00fff0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#mode-selection button:hover,
+#room-controls button:hover {
+  background: #00fff0;
+  color: #232946;
+  transform: scale(1.05);
+}
+
+/* Choice Buttons */
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  margin-top: 2.5rem; 
+  margin-bottom: 2rem;
+}
+.button button {
+  flex: 1 1 100px;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #282A36;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.button button:hover {
+  background: #00FFFF;
+  color: #1E1E2F;
+  transform: scale(1.05);
+}
+
+/* Result, Banter & Achievement */
+#result,
+#banter,
+#achievement {
+  margin: 0.75rem auto;
+  padding: 0.5rem;
+  background: #2D2F3A;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px #00FFFF;
+  color: #FF6F61;
+  font-size: 1rem;
+  min-height: 2.5rem;
+}
+#achievement {
+  background: linear-gradient(90deg, #ff9800 60%, #ffd700 100%);
+  color: #232946;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Inline Leaderboard */
+.leaderboard-inline {
+  margin: 1rem auto;
+  padding: 0.75rem;
+  background: rgba(35, 41, 70, 0.9);
+  border: 2px solid #2196f3;
+  border-radius: 0.5rem;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  text-align: center;
+}
+.leaderboard-inline h2 {
+  margin-bottom: 0.5rem;
+  color: #00FFFF;
+  font-size: 1.25rem;
+}
+.leaderboard-inline p {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  .button button { font-size: 1.25rem; padding: 0.5rem; }
+  #mode-selection button,
+  #room-controls button,
+  #room-controls input { font-size: 0.9rem; }
+}
+
+
